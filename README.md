@@ -28,7 +28,7 @@ Put the following snippet in `.repo/local_manifests/eagle.xml`:
 ```
 
 Download the zip file with vendor binaries from:
-http://developer.sonymobile.com/knowledge-base/open-source/android-open-source-project-for-xperia-devices/
+http://developer.sonymobile.com/knowledge-base/open-source/open-devices/list-of-devices-and-resources/
 
 In the root of your Android code tree unzip the `SW_binaries_for_Xperia_Z_v2.zip`.
 
