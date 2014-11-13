@@ -16,6 +16,9 @@ SOMC_PLATFORM := yukon
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/yukon/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-radio
+$(call inherit-product, $(LOCAL_PATH)/radio.mk)
+
 
 SONY_ROOT:=device/sony/yukon/rootdir
 PRODUCT_COPY_FILES += \

@@ -61,9 +61,16 @@ BOARD_EGL_CFG := device/sony/yukon/rootdir/system/lib/egl/egl.cfg
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
 
+# RIL
+BOARD_HAS_RIL_LEGACY_PAP := true
+BOARD_USES_QCOM_RIL_RESPONSE_5_ELEMENTS := true
+
 USE_CAMERA_STUB := false
 TARGET_USES_ION := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+
+#Radio
+BOARD_HAVE_RADIO := true
 
 # Wi-Fi definitions for Qualcomm solution
 BOARD_HAS_QCOM_WLAN := true
