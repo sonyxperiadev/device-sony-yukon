@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
-#Audio
+# Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8226 \
@@ -86,7 +86,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8226 \
     libgenlock \
     libqdutils \
-    libqdMetaData
+    libqdMetaData \
+    lights.msm8226
 
 # NFC packages
 PRODUCT_PACKAGES += \
