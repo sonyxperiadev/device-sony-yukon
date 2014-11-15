@@ -14,6 +14,8 @@
 
 SOMC_PLATFORM := yukon
 
+COMMON_PATH := device/sony/yukon
+
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/yukon/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-radio
@@ -95,13 +97,24 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8226
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/gps/flp.conf:system/etc/flp.conf \
+    $(COMMON_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
+    $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf
+
 #GPS
 PRODUCT_PACKAGES += \
-    libloc_api_v02 \
-    libloc_adapter \
-    libloc_eng \
-    libgps.utils \
-    gps.msm8226
+#    gps.msm8226 \
+#    libloc_api_v02 \
+#    libloc_adapter \
+#    libloc_eng \
+#    libgps.utils
 
 #Wifi
 PRODUCT_PACKAGES += \
@@ -121,6 +134,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     rmt_storage
+
+# Thermal
+#PRODUCT_COPY_FILES += \
+#   $(SONY_ROOT)/system/etc/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf
 
 #OSS
 PRODUCT_PACKAGES += \
@@ -147,6 +164,14 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
+
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.gps.qmienabled=true \
+   ro.qc.sdk.izat.premium_enabled=1 \
+   ro.qc.sdk.izat.service_mask=0x5 \
+   persist.gps.qc_nlp_in_use=0 \
+   ro.gps.agps_provider=1
 
 # Platform specific properties
 #
