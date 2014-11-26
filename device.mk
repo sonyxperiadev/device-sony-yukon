@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqdMetaData
 
+#lights
+PRODUCT_PACKAGES += \
+    lights.yukon
+
 # NFC packages
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \

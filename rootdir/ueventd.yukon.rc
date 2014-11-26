@@ -127,6 +127,18 @@
 /dev/tsc_mux0             0660   media       media
 /dev/tsc_ci0              0660   media       media
 
+#leds
+/sys/devices/00-qcom,leds-a100/leds/led:* max_brightness 0644 root system
+/sys/devices/00-qcom,leds-a100/leds/led:* brightness 0664 system system
+/sys/devices/00-qcom,leds-a300/leds/led:* max_brightness 0644 root system
+/sys/devices/00-qcom,leds-a300/leds/led:* brightness 0664 system system
+/sys/devices/00-qcom,leds-a500/leds/led:* max_brightness 0644 root system
+/sys/devices/00-qcom,leds-a500/leds/led:* brightness 0664 system system
+/sys/devices/01-qcom,leds-d300/leds/led:* max_brightness 0644 root system
+/sys/devices/01-qcom,leds-d300/leds/led:* brightness 0664 system system
+/sys/devices/01-qcom,leds-d800/leds/wled:* max_brightness 0644 root system
+/sys/devices/01-qcom,leds-d800/leds/wled:* brightness 0664 system system
+
 # sensors
 /sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
 /sys/devices/f9925000.i2c/i2c-0/0-* enable          0660     input     system
