@@ -14,6 +14,8 @@
 
 SOMC_PLATFORM := yukon
 
+COMMON_PATH := device/sony/yukon
+
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/yukon/overlay
 
@@ -58,7 +60,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
-#Audio
+# Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8226 \
@@ -84,7 +86,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8226 \
     libgenlock \
     libqdutils \
-    libqdMetaData
+    libqdMetaData \
+    lights.msm8226
 
 #lights
 PRODUCT_PACKAGES += \
@@ -96,13 +99,24 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8226
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/gps/flp.conf:system/etc/flp.conf \
+    $(COMMON_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
+    $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf
+
 #GPS
 PRODUCT_PACKAGES += \
-    libloc_api_v02 \
-    libloc_adapter \
-    libloc_eng \
-    libgps.utils \
-    gps.msm8226
+#    gps.msm8226 \
+#    libloc_api_v02 \
+#    libloc_adapter \
+#    libloc_eng \
+#    libgps.utils
 
 #Wifi
 PRODUCT_PACKAGES += \
@@ -122,6 +136,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     rmt_storage
+
+# Thermal
+#PRODUCT_COPY_FILES += \
+#   $(SONY_ROOT)/system/etc/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf
 
 #OSS
 PRODUCT_PACKAGES += \
@@ -149,10 +167,39 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.gps.qmienabled=true \
+   ro.qc.sdk.izat.premium_enabled=1 \
+   ro.qc.sdk.izat.service_mask=0x5 \
+   persist.gps.qc_nlp_in_use=0 \
+   ro.gps.agps_provider=1
+
 # Platform specific properties
 #
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
+
+# LTE, GSM/WCDMA
+PRODUCT_PROPERTY_OVERRIDES += \
+    telephony.lteOnGsmDevice=1 \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.add_power_save=1 \
+    persist.radio.mode_pref_nv10=1
+
+# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.call_ring.multiple=0
+
+# System props for the data modules
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.netmgrd.qos.enable=false
+
+# update 1x signal strength after 2s
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.snapshot_enabled=1 \
+    persist.radio.snapshot_timer=2
+
 
 # Get the long list of apns
 PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
