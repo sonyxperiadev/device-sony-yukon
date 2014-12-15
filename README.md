@@ -28,7 +28,7 @@ Put the following snippet in `.repo/local_manifests/yukon.xml`:
 ```
 
 Download the zip file with vendor binaries from:
-http://developer.sonymobile.com/knowledge-base/open-source/android-open-source-project-for-xperia-devices/
+http://developer.sonymobile.com/downloads/tool/software-binaries-for-xperia-z2-xperia-z1-and-xperia-z/
 
 In the root of your Android code tree unzip the corresponding vendor zip.
 
