@@ -20,6 +20,8 @@ Put the following snippet in `.repo/local_manifests/yukon.xml`:
 <remove-project name="platform/hardware/akm" />
 
 <project path="device/sony/eagle" name="device-sony-eagle" groups="device" remote="sony" revision="master" />
+<project path="device/sony/flamingo" name="device-sony-flamingo" groups="device" remote="sony" revision="master" />
+<project path="device/sony/seagull" name="device-sony-seagull" groups="device" remote="sony" revision="master" />
 <project path="device/sony/tianchi" name="device-sony-tianchi" groups="device" remote="sony" revision="master" />
 <project path="device/sony/yukon" name="device-sony-yukon" groups="device" remote="sony" revision="master" />
 </manifest>
