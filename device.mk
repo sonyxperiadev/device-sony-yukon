@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     ta2bin
 
 PRODUCT_PACKAGES += \
-    rmt_storage
+    libemoji
 
 #OSS
 PRODUCT_PACKAGES += \
