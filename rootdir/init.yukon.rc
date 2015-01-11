@@ -114,6 +114,9 @@ on post-fs-data
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
+    # HAL is hardwired to look at pn544
+    symlink /dev/pn547 /dev/pn544
+
     #Create directory from IMS services
     mkdir /data/shared 0755
     chown system system /data/shared
