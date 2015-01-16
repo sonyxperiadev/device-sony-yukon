@@ -21,7 +21,6 @@ persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
 tunnel.audio.encode=true
 tunnel.decode=false
-af.resampler.quality=4
 persist.nfc.cap.fwver=0000000
 persist.nfc.cap.hwver=0005
 persist.nfc.cap.chipid=0000
