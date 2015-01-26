@@ -112,7 +112,6 @@ PRODUCT_PACKAGES += \
     Tag \
     nfc_nci.pn54x.default
 
-
 #GPS
 PRODUCT_PACKAGES += \
     libloc_api_v02 \
@@ -127,6 +126,9 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+    keystore.msm8226
 
 #Misc
 PRODUCT_PACKAGES += \
