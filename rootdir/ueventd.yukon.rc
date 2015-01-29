@@ -157,6 +157,7 @@
 /dev/hidraw*                                         0666 system  system
 /dev/ttyHS0                                          0660 bluetooth bluetooth
 /dev/ttyHS2                                          0660 bluetooth bluetooth
+/sys/module/hci_smd/parameters/hcismd_set            0660 bluetooth bluetooth
 /sys/devices/platform/msm_serial_hs.0/clock          0660 bluetooth bluetooth
 
 # wlan
