@@ -33,6 +33,7 @@ PRODUCT_COPY_FILES += \
  
 # Copy extra files
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -49,6 +50,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/audio_effects.conf:system/etc/audio_effects.conf \
     $(SONY_ROOT)/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(SONY_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
     $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
@@ -81,6 +83,13 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     libtinycompress \
     libaudioroute
+
+# Audio effects
+PRODUCT_PACKAGES += \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors \
+    libqcompostprocbundle
 
 #GFX
 PRODUCT_PACKAGES += \
