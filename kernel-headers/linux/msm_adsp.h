@@ -1,5 +1,4 @@
-/* include/linux/msm_adsp.h
- *
+/*
  * Copyright (C) 2007 Google, Inc.
  * Author: Iliyan Malchev <ibm@android.com>
  *
@@ -13,8 +12,8 @@
  * GNU General Public License for more details.
  *
  */
-#ifndef __LINUX_MSM_ADSP_H
-#define __LINUX_MSM_ADSP_H
+#ifndef _UAPI_LINUX_MSM_ADSP_H
+#define _UAPI_LINUX_MSM_ADSP_H
 
 #include <linux/types.h>
 #include <linux/ioctl.h>
