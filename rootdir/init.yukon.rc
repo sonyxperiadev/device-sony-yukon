@@ -120,6 +120,9 @@ on post-fs-data
     mkdir /data/shared 0755
     chown system system /data/shared
 
+    # Create /data/time folder for time-services
+    mkdir /data/time/ 0700 system system
+
     # Enable the setgid bit on the directory
     mkdir /data/audio 0770 media audio
     chmod 2770 /data/audio
@@ -427,3 +430,8 @@ service charger /sbin/healthd -c
     class charger
     critical
     seclabel u:r:healthd:s0
+
+service time_daemon /system/bin/time_daemon
+   class late_start
+   user root
+   group root
