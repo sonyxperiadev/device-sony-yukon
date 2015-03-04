@@ -290,6 +290,11 @@ on boot
     #WCNSS enable
     write /dev/wcnss_wlan 1
 
+    # low memory killer is not calculating the minfree paremeters correctly
+    # so set them manually and prevent any changes.
+    write /sys/module/lowmemorykiller/parameters/minfree "6144,7680,9216,10752,12288,15360"
+    chmod 440 /sys/module/lowmemorykiller/parameters/minfree
+
 #SONY misc
 service ta_qmi_service /system/bin/ta_qmi_service
     class main
