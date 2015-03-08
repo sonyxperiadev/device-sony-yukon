@@ -120,9 +120,6 @@ on post-fs-data
     mkdir /data/shared 0755
     chown system system /data/shared
 
-    # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
-
     # Enable the setgid bit on the directory
     mkdir /data/audio 0770 media audio
     chmod 2770 /data/audio
@@ -294,6 +291,9 @@ on boot
     # so set them manually and prevent any changes.
     write /sys/module/lowmemorykiller/parameters/minfree "6144,7680,9216,10752,12288,15360"
     chmod 440 /sys/module/lowmemorykiller/parameters/minfree
+    
+    # TimeKeep
+    timekeep restore
 
 #SONY misc
 service ta_qmi_service /system/bin/ta_qmi_service
@@ -435,8 +435,3 @@ service charger /sbin/healthd -c
     class charger
     critical
     seclabel u:r:healthd:s0
-
-service time_daemon /system/bin/time_daemon
-   class late_start
-   user root
-   group root
