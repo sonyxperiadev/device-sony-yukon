@@ -1,4 +1,4 @@
-ifeq ($(filter-out eagle flamingo seagull tianchi,$(TARGET_DEVICE)),)
+ifeq ($(filter-out eagle flamingo seagull tianchi tianchi_dsds,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
