@@ -18,7 +18,7 @@ import init.yukon.dev.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
-
+    chmod 644 /proc/cmdline
     mkdir /firmware 0771 system system
 
     # Set permissions for persist partition
