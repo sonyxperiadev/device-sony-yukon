@@ -179,6 +179,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
+# Platform specific tags
+#
+PRODUCT_TAGS += dalvik.gc.type-precise
+
 # Get the long list of apns
 PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
@@ -191,4 +195,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
-
