@@ -169,9 +169,6 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 PRODUCT_PACKAGES += \
-    Dialer \
-    Email \
-    Exchange2 \
     InCallUI \
     Launcher3
 
