@@ -22,7 +22,6 @@ SONY_ROOT:=device/sony/yukon/rootdir
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/ueventd.yukon.rc:root/ueventd.yukon.rc \
     $(SONY_ROOT)/init.yukon.rc:root/init.yukon.rc \
-    $(SONY_ROOT)/init.yukon.usb.rc:root/init.yukon.usb.rc \
     $(SONY_ROOT)/init.yukon.pwr.rc:root/init.yukon.pwr.rc \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(SONY_ROOT)/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
