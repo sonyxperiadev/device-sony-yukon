@@ -20,6 +20,7 @@ persist.radio.mode_pref_nv10=1
 persist.radio.snapshot_enabled=1
 persist.radio.snapshot_timer=2
 ro.opengles.version=196608
+mm.enable.smoothstreaming=true
 ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
