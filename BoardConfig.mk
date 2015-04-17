@@ -37,8 +37,8 @@ BOARD_CUSTOM_MKBOOTIMG := mkqcdtbootimg
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dt_dir $(OUT)/dtbs --dt_version 2
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=yukon user_debug=31 msm_rtb.filter=0x37 selinux=0
-BOARD_KERNEL_CMDLINE += coherent_pool=8M mem=1011M
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=yukon
+BOARD_KERNEL_CMDLINE +=  user_debug=31 msm_rtb.filter=0x37 selinux=0 coherent_pool=8M
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
