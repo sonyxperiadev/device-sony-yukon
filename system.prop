@@ -32,5 +32,3 @@ persist.nfc.cap.chipid=0000
 ro.nfc.port=I2C
 wifi.interface=wlan0
 ro.wifi.eap_sim_enabled=true
-wlan.driver.ath=0
-wlan.driver.config=/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
