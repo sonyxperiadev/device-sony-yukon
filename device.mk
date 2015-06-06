@@ -196,7 +196,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
 
 # ART
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-Xms=32m \
     dalvik.vm.dex2oat-Xmx=256m \
     dalvik.vm.image-dex2oat-Xms=48m \
