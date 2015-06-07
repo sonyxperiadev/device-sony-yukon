@@ -197,10 +197,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-Xms=32m \
-    dalvik.vm.dex2oat-Xmx=256m \
-    dalvik.vm.image-dex2oat-Xms=48m \
-    dalvik.vm.image-dex2oat-Xmx=48m \
     dalvik.vm.dex2oat-filter=interpret-only \
     dalvik.vm.image-dex2oat-filter=speed
 
