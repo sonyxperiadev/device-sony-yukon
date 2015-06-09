@@ -155,8 +155,8 @@ on early-boot
 on boot
 
     # read ahead buffer
-    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
-    write /sys/block/mmcblk1/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk0/queue/read_ahead_kb 512
+    write /sys/block/mmcblk1/queue/read_ahead_kb 512
 
     # Enable writing to led blink node from userspace
     chown system system /sys/class/leds/red/blink
