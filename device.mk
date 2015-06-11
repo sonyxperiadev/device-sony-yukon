@@ -107,6 +107,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
+PRODUCT_PACKAGES += \
+    libstlport
+
 #OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
