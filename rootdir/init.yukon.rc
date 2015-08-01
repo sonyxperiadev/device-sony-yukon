@@ -127,7 +127,7 @@ on post-fs-data
 
     mkdir /data/data/media 0770 media media
 
-    mkdir /data/camera 0771 root camera
+    mkdir /data/misc/camera 0771 root camera
 
     # Sensors
     mkdir /data/system 0775 system system
