@@ -312,45 +312,45 @@ on boot
     chmod 440 /sys/module/lowmemorykiller/parameters/minfree
 
 #SONY misc
-service tad_static /system/bin/tad_static /dev/block/platform/msm_sdcc.1/by-name/TA 0,16
+service tad_static /system/vendor/bin/tad_static /dev/block/platform/msm_sdcc.1/by-name/TA 0,16
     user root
     group root
     socket tad stream 0660 system system
     class core
 
 #SONY misc
-service ta_qmi_service /system/bin/ta_qmi_service
+service ta_qmi_service /system/vendor/bin/ta_qmi_service
     class main
     user root
 
 #QCOM prop
-service qmuxd /system/bin/qmuxd
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps diag
 
 #QCOM prop
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
 
 #QCOM prop
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
 
 #QCOM prop
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
 
 #QCOM prop
-service sct_service /system/bin/sct_service
+service sct_service /system/vendor/bin/sct_service
     user root
     class main
 
 #Camera
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
@@ -362,7 +362,7 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     group root
 
 #WCNSS service
-service wcnss-service /system/bin/wcnss_service
+service wcnss-service /system/vendor/bin/wcnss_service
     class late_start
     user system
     group system wifi
