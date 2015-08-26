@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+SONY_ROOT:=device/sony/yukon/rootdir
+
 SOMC_PLATFORM := yukon
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/yukon/overlay
-
-SONY_ROOT:=device/sony/yukon/rootdir
 
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/ueventd.yukon.rc:root/ueventd.yukon.rc \
@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
-#Audio
+# Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8226 \
@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
     libaudioalsa \
     libdiag
 
-# for audio.primary.msm8226
+# For audio.primary.msm8226
 PRODUCT_PACKAGES += \
     libtinyalsa \
     libtinycompress \
@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     libqcompostprocbundle
 
-#GFX
+# GFX
 PRODUCT_PACKAGES += \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstlport
 
-#OMX
+# OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libstagefrighthw \
@@ -121,18 +121,18 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libOmxVenc
 
-#lights
+# Lights
 PRODUCT_PACKAGES += \
     lights.yukon
 
-# NFC packages
+# NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     Tag \
     nfc_nci.msm8226
 
-#GPS
+# GPS
 PRODUCT_PACKAGES += \
     libloc_api_v02 \
     libloc_adapter \
@@ -141,7 +141,7 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     gps.msm8226
 
-#Wifi
+# WLAN
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
@@ -149,26 +149,25 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-#Misc
+# Misc
 PRODUCT_PACKAGES += \
     libmiscta \
     libta \
     tad_static \
-    rmt_storage \
     ta_qmi_service \
     ta2bin
 
-PRODUCT_PACKAGES += \
-    rmt_storage
-
-#OSS
+# OSS
 PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep \
     thermanager \
     macaddrsetup
 
-#Charger
+PRODUCT_PACKAGES += \
+    rmt_storage
+
+# Charger
 PRODUCT_PACKAGES += \
     charger_res_images
 
@@ -191,11 +190,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
-# Get the long list of apns
-PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+# APN list
+PRODUCT_COPY_FILES += \
+    device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
-# Platform specific properties
-#
+# Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
 
@@ -211,7 +210,6 @@ PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := \
 $(call add-product-dex-preopt-module-config,services,--compiler-filter=speed)
 
 # Platform specific default properties
-#
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp \
     persist.data.qmi.adb_logmask=0
