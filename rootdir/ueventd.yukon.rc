@@ -98,6 +98,7 @@
 /dev/nfc-nci              0660   nfc        nfc
 /dev/pn544                0660   nfc        nfc
 /dev/pn547                0660   nfc        nfc
+/dev/pn54x                0660   nfc        nfc
 
 # LED
 /sys/devices/00-qcom,leds-a100/leds/led:* max_brightness 0664 system system

@@ -117,7 +117,8 @@ on post-fs-data
     mkdir /data/misc/location/xtwifi 0770 gps gps
 
     # HAL is hardwired to look at pn544
-    symlink /dev/pn547 /dev/pn544
+    symlink /dev/pn54x /dev/pn544
+    symlink /dev/pn54x /dev/pn547
 
     # Create directory from IMS services
     mkdir /data/shared 0755
