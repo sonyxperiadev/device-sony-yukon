@@ -107,7 +107,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData
 
 PRODUCT_PACKAGES += \
-    libion
+    libion \
+    libtinyxml2
 
 # OMX
 PRODUCT_PACKAGES += \
