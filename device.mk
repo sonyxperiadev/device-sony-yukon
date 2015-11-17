@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SONY_ROOT:=device/sony/yukon/rootdir
+SONY_ROOT = device/sony/yukon/rootdir
 
 SOMC_PLATFORM := yukon
 
