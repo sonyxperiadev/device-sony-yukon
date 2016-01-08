@@ -33,7 +33,8 @@ typedef struct governor_settings {
     int min_sample_time;
     char *target_loads;
     char *target_loads_off;
-    int scaling_max_freq;
+    int scaling_max_freq_26;
+    int scaling_max_freq_28;
 } power_profile;
 
 static power_profile profiles[PROFILE_MAX] = {
@@ -48,7 +49,8 @@ static power_profile profiles[PROFILE_MAX] = {
         .min_sample_time = 60000,
         .target_loads = "95 1190400:99",
         .target_loads_off = "95 1190400:99",
-        .scaling_max_freq = 787200,
+        .scaling_max_freq_26 = 787200,
+        .scaling_max_freq_28 = 787200,
     },
     [PROFILE_BALANCED] = {
         .boost = 0,
@@ -61,7 +63,8 @@ static power_profile profiles[PROFILE_MAX] = {
         .min_sample_time = 60000,
         .target_loads = "80 998400:90 1190400:99",
         .target_loads_off = "95 1190400:99",
-        .scaling_max_freq = 1190400,
+        .scaling_max_freq_26 = 1190400,
+        .scaling_max_freq_28 = 1401600,
     },
     [PROFILE_HIGH_PERFORMANCE] = {
         .boost = 1,
@@ -74,6 +77,7 @@ static power_profile profiles[PROFILE_MAX] = {
         .min_sample_time = 60000,
         .target_loads = "80",
         .target_loads_off = "80",
-        .scaling_max_freq = 1190400,
+        .scaling_max_freq_26 = 1190400,
+        .scaling_max_freq_28 = 1401600,
     },
 };
