@@ -151,23 +151,12 @@ PRODUCT_PACKAGES += \
     libqomx_core \
     camera.msm8226
 
-# Misc
-PRODUCT_PACKAGES += \
-    libmiscta \
-    libta \
-    tad_static \
-    ta_qmi_service \
-    ta2bin
-
 # OSS
 PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep \
     thermanager \
     macaddrsetup
-
-PRODUCT_PACKAGES += \
-    rmt_storage
 
 # Charger
 PRODUCT_PACKAGES += \
