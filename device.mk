@@ -181,6 +181,9 @@ PRODUCT_PACKAGES += \
     Launcher3
 
 PRODUCT_PACKAGES += \
+    libxml2
+
+PRODUCT_PACKAGES += \
     libemoji
 
 # APN list
