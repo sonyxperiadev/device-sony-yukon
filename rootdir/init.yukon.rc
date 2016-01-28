@@ -303,13 +303,6 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     user root
     group root
 
-# WCNSS service
-service wcnss_service /system/vendor/bin/wcnss_service
-    class late_start
-    user system
-    group system wifi
-    oneshot
-
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
