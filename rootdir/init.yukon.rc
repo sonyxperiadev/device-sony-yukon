@@ -370,7 +370,7 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     oneshot
 
 # BT service
-service hciattach /system/bin/sh /system/etc/init.yukon.bt.sh
+service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth system
