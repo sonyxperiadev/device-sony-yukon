@@ -25,9 +25,6 @@ on early-init
     mkdir /persist 0771 system system
 
 on init
-    # Support legacy libs
-    symlink /system/vendor/lib/egl /egl
-
     mkdir /dev/bus 0755 root root
     mkdir /dev/bus/usb 0755 root root
 
