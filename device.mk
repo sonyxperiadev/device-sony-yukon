@@ -12,21 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SONY_ROOT:=device/sony/yukon/rootdir
-
 SOMC_PLATFORM := yukon
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/yukon/overlay
+SONY_ROOT:= device/sony/yukon/rootdir
 
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(SONY_ROOT)/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(SONY_ROOT)/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    $(SONY_ROOT)/system/etc/sec_config:system/etc/sec_config \
-    $(SONY_ROOT)/system/etc/gps.conf:system/etc/gps.conf \
-    $(SONY_ROOT)/system/etc/sensors_settings:system/etc/sensors_settings
+DEVICE_PACKAGE_OVERLAYS += device/sony/yukon/overlay
 
+# Init
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/init.recovery.yukon.rc:root/init.recovery.yukon.rc \
     $(SONY_ROOT)/init.yukon.rc:root/init.yukon.rc \
@@ -34,22 +26,28 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/init.yukon.pwr.rc:root/init.yukon.pwr.rc \
     $(SONY_ROOT)/ueventd.yukon.rc:root/ueventd.yukon.rc
 
+# Media
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(SONY_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(SONY_ROOT)/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-# NFC
+# Qualcom WiFi
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
+    $(SONY_ROOT)/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(SONY_ROOT)/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+
+# Qualcom BT
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+
+# Device Specific Hardware
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
 # NFC packages
 PRODUCT_PACKAGES += \
