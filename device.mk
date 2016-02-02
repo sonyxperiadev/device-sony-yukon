@@ -16,8 +16,6 @@ SOMC_PLATFORM := yukon
 
 SONY_ROOT:= device/sony/yukon/rootdir
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/yukon/overlay
-
 # Init
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/init.recovery.yukon.rc:root/init.recovery.yukon.rc \
