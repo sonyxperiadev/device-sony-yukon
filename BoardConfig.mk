@@ -55,5 +55,3 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # NFC
 NFC_NXP_CHIP_TYPE := PN547C2
 
-# SELinux
-BOARD_SEPOLICY_DIRS += device/sony/yukon/sepolicy
