@@ -16,16 +16,6 @@ SOMC_PLATFORM := yukon
 
 SONY_ROOT:= device/sony/yukon/rootdir
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/yukon/overlay
-
-# Init
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/init.recovery.yukon.rc:root/init.recovery.yukon.rc \
-    $(SONY_ROOT)/init.yukon.rc:root/init.yukon.rc \
-    $(SONY_ROOT)/init.yukon.usb.rc:root/init.yukon.usb.rc \
-    $(SONY_ROOT)/init.yukon.pwr.rc:root/init.yukon.pwr.rc \
-    $(SONY_ROOT)/ueventd.yukon.rc:root/ueventd.yukon.rc
-
 # Media
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/audio_effects.conf:system/etc/audio_effects.conf \
@@ -49,6 +39,10 @@ PRODUCT_COPY_FILES += \
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+
+# Platform Init
+PRODUCT_PACKAGES += \
+    init.yukon.pwr
 
 # NFC packages
 PRODUCT_PACKAGES += \

@@ -106,20 +106,24 @@
 /sys/devices/00-qcom,leds-a100/leds/led:* blink          0664 system system
 /sys/devices/00-qcom,leds-a100/leds/led:* duty_pcts      0664 system system
 /sys/devices/00-qcom,leds-a100/leds/led:* ramp_step_ms   0664 system system
+
 /sys/devices/00-qcom,leds-a300/leds/led:* max_brightness 0664 system system
 /sys/devices/00-qcom,leds-a300/leds/led:* brightness     0664 system system
 /sys/devices/00-qcom,leds-a300/leds/led:* blink          0664 system system
 /sys/devices/00-qcom,leds-a300/leds/led:* duty_pcts      0664 system system
 /sys/devices/00-qcom,leds-a300/leds/led:* ramp_step_ms   0664 system system
+
 /sys/devices/00-qcom,leds-a500/leds/led:* max_brightness 0664 system system
 /sys/devices/00-qcom,leds-a500/leds/led:* brightness     0664 system system
 /sys/devices/00-qcom,leds-a500/leds/led:* blink          0664 system system
 /sys/devices/00-qcom,leds-a500/leds/led:* duty_pcts      0664 system system
 /sys/devices/00-qcom,leds-a500/leds/led:* ramp_step_ms   0664 system system
+
 /sys/devices/01-qcom,leds-d300/leds/led:* max_brightness 0664 system system
 /sys/devices/01-qcom,leds-d300/leds/led:* brightness     0664 system system
 /sys/devices/01-qcom,leds-d800/leds/wled:backlight max_brightness         0664 system system
 /sys/devices/01-qcom,leds-d800/leds/wled:backlight brightness             0664 system system
+
 /sys/devices/f9926000.i2c/i2c-0/0-0036/leds/wled:backlight max_brightness 0664 system system
 /sys/devices/f9926000.i2c/i2c-0/0-0036/leds/wled:backlight brightness     0664 system system
 
