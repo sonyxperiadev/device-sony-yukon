@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, device/sony/common/common.mk)
+
 SOMC_PLATFORM := yukon
 
 SONY_ROOT:= device/sony/yukon/rootdir
