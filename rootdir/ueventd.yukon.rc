@@ -127,6 +127,9 @@
 /sys/devices/f9926000.i2c/i2c-0/0-0036/leds/wled:backlight max_brightness 0664 system system
 /sys/devices/f9926000.i2c/i2c-0/0-0036/leds/wled:backlight brightness     0664 system system
 
+/sys/class/leds/lcd-backlight/max_brightness             0644 root system
+/sys/class/leds/lcd-backlight/brightness                 0664 system system
+
 # Sensors
 /sys/devices/i2c-12/12-*  pollrate_ms                           0664 system system
 /sys/devices/f9925000.i2c/i2c-0/0-* enable                      0660 input  system
