@@ -70,14 +70,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8226
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.yukon
-
-# Simple PowerHAL
-PRODUCT_PACKAGES += \
-    power.yukon
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
