@@ -60,6 +60,9 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # NFC
 NFC_NXP_CHIP_TYPE := PN547C2
 
+# Props for hotplugging
+TARGET_SYSTEM_PROP += device/sony/yukon/system.prop
+
 # SELinux
 BOARD_SEPOLICY_DIRS += device/sony/yukon/sepolicy
 

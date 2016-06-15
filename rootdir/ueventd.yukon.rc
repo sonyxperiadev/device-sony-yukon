@@ -154,3 +154,11 @@
 /dev/uio0                 0660 system system
 /dev/uio1                 0660 system system
 /dev/uio2                 0660 system system
+
+# cpuquiet rqbalance permissions
+/sys/devices/system/cpu/cpuquiet/nr_min_cpus                         0660 system system
+/sys/devices/system/cpu/cpuquiet/nr_power_max_cpus                   0660 system system
+/sys/devices/system/cpu/cpuquiet/nr_thermal_max_cpus                 0660 system system
+/sys/devices/system/cpu/cpuquiet/rqbalance/balance_level             0660 system system
+/sys/devices/system/cpu/cpuquiet/rqbalance/nr_run_thresholds         0660 system system
+/sys/devices/system/cpu/cpuquiet/rqbalance/nr_down_run_thresholds    0660 system system
