@@ -64,6 +64,6 @@ NFC_NXP_CHIP_TYPE := PN547C2
 TARGET_SYSTEM_PROP += device/sony/yukon/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/sony/yukon/sepolicy
+include device/sony/sepolicy/sepolicy.mk
 
 include device/sony/common/CommonConfig.mk
