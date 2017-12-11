@@ -51,3 +51,9 @@ on property:sys.boot_completed=1
     chmod 664 /sys/devices/system/cpu/cpu1/online
     chmod 664 /sys/devices/system/cpu/cpu2/online
     chmod 664 /sys/devices/system/cpu/cpu3/online
+
+    # Do not keep the LCD backlight always on (causing unneeded battery
+    # power consumption):
+    write /sys/class/leds/lcd-backlight/trigger "none"
+    write /sys/class/leds/lcd-backlight/brightness 255
+    write /sys/class/leds/lcd-backlight/max_brightness 255
