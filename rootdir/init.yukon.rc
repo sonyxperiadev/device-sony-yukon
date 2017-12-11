@@ -46,6 +46,7 @@ on init
     symlink /storage/emulated/legacy /sdcard
     symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
+    symlink /storage/emulated/legacy /storage/emulated/0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
     mkdir /dev/bus 0755 root root
@@ -62,6 +63,8 @@ on post-fs-data
     # we will remap this as /mnt/sdcard with the sdcard fuse tool
     mkdir /data/media 0775 media_rw media_rw
     chown media_rw media_rw /data/media
+    mkdir /data/media/0 0770 media_rw media_rw
+    restorecon /data/media/0
 
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
 
@@ -386,7 +389,7 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     oneshot
 
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
-    class late_start
+    class main
 
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
